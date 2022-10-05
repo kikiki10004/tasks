@@ -97,31 +97,22 @@ Console.WriteLine("Ding Ding Ding");
 
 //guessecret = Console.ReadLine();
 
+var secretnumber = 653;
+var yournumber = "";
+int yrnumber;
+int ze = 1;
 
+Console.WriteLine("Enter your secret number");
+yournumber = Console.ReadLine();
+Int32.TryParse(yournumber, out yrnumber);
 
-
-
-var zerro = 0;
-
-var specnumber = "";
-// var 를 문자 5로 지정
-int intguesss;
-//intguess는 문자로 지정 블랭크로 남겨둠
-
-Console.WriteLine("Enter your number");
-
-specnumber = Console.ReadLine();
-// 콘솔 뤼드 라인이 값을입력하게 하는것인거같음
-Int32.TryParse(specnumber, out intguesss);
-//anynumber라는 문자를 intguess라는 숫자로 인식하게 함
-    Console.WriteLine("Fizz buzz");
-while (zerro <= intguess) {
-
-    Console.WriteLine(zerro);
-
-    zerro++;
-    if(zerro> intguesss){
-        Console.WriteLine("end");
+while (yrnumber != secretnumber) {
+    if(ze == 10) {
+        Console.WriteLine("That is it for today");
         break;
     }
+    Console.WriteLine("Wrong, counter value is");
+    yournumber = Console.ReadLine();
+    ze ++;
 }
+Console.WriteLine("Correct");
