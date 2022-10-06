@@ -37,11 +37,11 @@ while (guess != magicnumber)
 //}
 
 var zero = 0;
-// guess 문자로 지정하규
+// zero라는 변수를 숫자 0으로 지정
 var anynumber = "";
 // var 를 문자 5로 지정
 int intguess;
-//intguess는 문자로 지정 블랭크로 남겨둠
+//intguess는 숫자로 지정 나중에 anynumber를 intguess
 
 Console.WriteLine("Enter your number");
 
@@ -70,7 +70,7 @@ var magicwords = "It gets wet.";
 Console.WriteLine("What happens when you throw a yellow rock in the red sea?");
 
 guesswhat = Console.ReadLine();
-// 콘솔 뤼드 라인이 값을입력하게 하는것인거같음
+// 콘솔 뤼드 라인뒤에 값을입력하게 하는것
 
 while (guesswhat != magicwords)
 {   
@@ -88,10 +88,9 @@ Console.WriteLine("Ding Ding Ding");
 
 
 //var secretnum = 653;
-// guess 문자로 지정하규
-//var guesscret = "";
-// var 를 문자 It gets wet.로 지정
-//는 문자로 지정 블랭크로 남겨둠
+// yournumer 는 공백으로
+// yrnumber는 숫자 your number를 yrnumber로 바꿀거야
+
 
 //Console.WriteLine("Enter the secret number");
 
@@ -111,8 +110,11 @@ while (yrnumber != secretnumber) {
         Console.WriteLine("That is it for today");
         break;
     }
+
     Console.WriteLine("Wrong, counter value is");
     yournumber = Console.ReadLine();
+    Int32.TryParse(yournumber, out yrnumber);
     ze ++;
+    
 }
 Console.WriteLine("Correct");
