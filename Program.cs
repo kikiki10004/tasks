@@ -117,4 +117,7 @@ while (yrnumber != secretnumber) {
     ze ++;
     
 }
+
+if (yrnumber == secretnumber) {
 Console.WriteLine("Correct");
+}
